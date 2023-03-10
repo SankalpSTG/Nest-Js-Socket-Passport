@@ -6,6 +6,8 @@ import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { ChatGateway } from './chat.gateway';
 import { TasksModule } from './task/task.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -15,6 +17,7 @@ import { TasksModule } from './task/task.module';
     AuthModule,
     TasksModule,
   ],
-  providers: [ChatGateway],
+  providers: [ChatGateway, AppService],
+  controllers: [AppController],
 })
 export class AppModule {}
