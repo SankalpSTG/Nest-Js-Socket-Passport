@@ -5,11 +5,11 @@ const port: number = parseInt(<string>process.env.PORT) || 3306;
 
 export const typeormConnectionConfig: TypeOrmModuleOptions = {
   type: 'mysql',
-  host: "34.93.156.51",
+  host: "<<HOST>>",
   port: 3306,
-  username: "sankalp",
-  password: "Sankalp@123",
-  database: "apostrfy",
+  username: "<<USERNAME>>",
+  password: "<<PASSWORD>>",
+  database: "<<DATABASENAME>>",
   entities: [User, Task],
   synchronize: false,
 };
